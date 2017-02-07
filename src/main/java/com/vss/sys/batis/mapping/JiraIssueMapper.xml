@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.vss.sys.batis.mapper.JiraIssueMapper" >
+  <resultMap id="BaseResultMap" type="com.vss.sys.batis.model.JiraIssue" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="pkey" property="pkey" jdbcType="VARCHAR" />
+    <result column="PROJECT" property="project" jdbcType="DECIMAL" />
+    <result column="REPORTER" property="reporter" jdbcType="VARCHAR" />
+    <result column="ASSIGNEE" property="assignee" jdbcType="VARCHAR" />
+    <result column="issuetype" property="issuetype" jdbcType="VARCHAR" />
+    <result column="SUMMARY" property="summary" jdbcType="VARCHAR" />
+    <result column="PRIORITY" property="priority" jdbcType="VARCHAR" />
+    <result column="RESOLUTION" property="resolution" jdbcType="VARCHAR" />
+    <result column="issuestatus" property="issuestatus" jdbcType="VARCHAR" />
+    <result column="CREATED" property="created" jdbcType="TIMESTAMP" />
+    <result column="UPDATED" property="updated" jdbcType="TIMESTAMP" />
+    <result column="DUEDATE" property="duedate" jdbcType="TIMESTAMP" />
+    <result column="RESOLUTIONDATE" property="resolutiondate" jdbcType="TIMESTAMP" />
+    <result column="VOTES" property="votes" jdbcType="DECIMAL" />
+    <result column="WATCHES" property="watches" jdbcType="DECIMAL" />
+    <result column="TIMEORIGINALESTIMATE" property="timeoriginalestimate" jdbcType="DECIMAL" />
+    <result column="TIMEESTIMATE" property="timeestimate" jdbcType="DECIMAL" />
+    <result column="TIMESPENT" property="timespent" jdbcType="DECIMAL" />
+    <result column="WORKFLOW_ID" property="workflowId" jdbcType="DECIMAL" />
+    <result column="SECURITY" property="security" jdbcType="DECIMAL" />
+    <result column="FIXFOR" property="fixfor" jdbcType="DECIMAL" />
+    <result column="COMPONENT" property="component" jdbcType="DECIMAL" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.vss.sys.batis.model.JiraIssueWithBLOBs" extends="BaseResultMap" >
+    <result column="DESCRIPTION" property="description" jdbcType="LONGVARCHAR" />
+    <result column="ENVIRONMENT" property="environment" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, pkey, PROJECT, REPORTER, ASSIGNEE, issuetype, SUMMARY, PRIORITY, RESOLUTION, 
+    issuestatus, CREATED, UPDATED, DUEDATE, RESOLUTIONDATE, VOTES, WATCHES, TIMEORIGINALESTIMATE, 
+    TIMEESTIMATE, TIMESPENT, WORKFLOW_ID, SECURITY, FIXFOR, COMPONENT
+  </sql>
+  <sql id="Blob_Column_List" >
+    DESCRIPTION, ENVIRONMENT
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from jiraissue
+    where ID = #{id,jdbcType=DECIMAL}
+  </select>
+
+  <select id="selectByPKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from jiraissue
+    where pkey = #{pkey,jdbcType=VARCHAR}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from jiraissue
+    where ID = #{id,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.vss.sys.batis.model.JiraIssueWithBLOBs" >
+    insert into jiraissue (ID, pkey, PROJECT, 
+      REPORTER, ASSIGNEE, issuetype, 
+      SUMMARY, PRIORITY, RESOLUTION, 
+      issuestatus, CREATED, UPDATED, 
+      DUEDATE, RESOLUTIONDATE, VOTES, 
+      WATCHES, TIMEORIGINALESTIMATE, TIMEESTIMATE, 
+      TIMESPENT, WORKFLOW_ID, SECURITY, 
+      FIXFOR, COMPONENT, DESCRIPTION, 
+      ENVIRONMENT)
+    values (#{id,jdbcType=DECIMAL}, #{pkey,jdbcType=VARCHAR}, #{project,jdbcType=DECIMAL}, 
+      #{reporter,jdbcType=VARCHAR}, #{assignee,jdbcType=VARCHAR}, #{issuetype,jdbcType=VARCHAR}, 
+      #{summary,jdbcType=VARCHAR}, #{priority,jdbcType=VARCHAR}, #{resolution,jdbcType=VARCHAR}, 
+      #{issuestatus,jdbcType=VARCHAR}, #{created,jdbcType=TIMESTAMP}, #{updated,jdbcType=TIMESTAMP}, 
+      #{duedate,jdbcType=TIMESTAMP}, #{resolutiondate,jdbcType=TIMESTAMP}, #{votes,jdbcType=DECIMAL}, 
+      #{watches,jdbcType=DECIMAL}, #{timeoriginalestimate,jdbcType=DECIMAL}, #{timeestimate,jdbcType=DECIMAL}, 
+      #{timespent,jdbcType=DECIMAL}, #{workflowId,jdbcType=DECIMAL}, #{security,jdbcType=DECIMAL}, 
+      #{fixfor,jdbcType=DECIMAL}, #{component,jdbcType=DECIMAL}, #{description,jdbcType=LONGVARCHAR}, 
+      #{environment,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.vss.sys.batis.model.JiraIssueWithBLOBs" >
+    insert into jiraissue
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="pkey != null" >
+        pkey,
+      </if>
+      <if test="project != null" >
+        PROJECT,
+      </if>
+      <if test="reporter != null" >
+        REPORTER,
+      </if>
+      <if test="assignee != null" >
+        ASSIGNEE,
+      </if>
+      <if test="issuetype != null" >
+        issuetype,
+      </if>
+      <if test="summary != null" >
+        SUMMARY,
+      </if>
+      <if test="priority != null" >
+        PRIORITY,
+      </if>
+      <if test="resolution != null" >
+        RESOLUTION,
+      </if>
+      <if test="issuestatus != null" >
+        issuestatus,
+      </if>
+      <if test="created != null" >
+        CREATED,
+      </if>
+      <if test="updated != null" >
+        UPDATED,
+      </if>
+      <if test="duedate != null" >
+        DUEDATE,
+      </if>
+      <if test="resolutiondate != null" >
+        RESOLUTIONDATE,
+      </if>
+      <if test="votes != null" >
+        VOTES,
+      </if>
+      <if test="watches != null" >
+        WATCHES,
+      </if>
+      <if test="timeoriginalestimate != null" >
+        TIMEORIGINALESTIMATE,
+      </if>
+      <if test="timeestimate != null" >
+        TIMEESTIMATE,
+      </if>
+      <if test="timespent != null" >
+        TIMESPENT,
+      </if>
+      <if test="workflowId != null" >
+        WORKFLOW_ID,
+      </if>
+      <if test="security != null" >
+        SECURITY,
+      </if>
+      <if test="fixfor != null" >
+        FIXFOR,
+      </if>
+      <if test="component != null" >
+        COMPONENT,
+      </if>
+      <if test="description != null" >
+        DESCRIPTION,
+      </if>
+      <if test="environment != null" >
+        ENVIRONMENT,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=DECIMAL},
+      </if>
+      <if test="pkey != null" >
+        #{pkey,jdbcType=VARCHAR},
+      </if>
+      <if test="project != null" >
+        #{project,jdbcType=DECIMAL},
+      </if>
+      <if test="reporter != null" >
+        #{reporter,jdbcType=VARCHAR},
+      </if>
+      <if test="assignee != null" >
+        #{assignee,jdbcType=VARCHAR},
+      </if>
+      <if test="issuetype != null" >
+        #{issuetype,jdbcType=VARCHAR},
+      </if>
+      <if test="summary != null" >
+        #{summary,jdbcType=VARCHAR},
+      </if>
+      <if test="priority != null" >
+        #{priority,jdbcType=VARCHAR},
+      </if>
+      <if test="resolution != null" >
+        #{resolution,jdbcType=VARCHAR},
+      </if>
+      <if test="issuestatus != null" >
+        #{issuestatus,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updated != null" >
+        #{updated,jdbcType=TIMESTAMP},
+      </if>
+      <if test="duedate != null" >
+        #{duedate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="resolutiondate != null" >
+        #{resolutiondate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="votes != null" >
+        #{votes,jdbcType=DECIMAL},
+      </if>
+      <if test="watches != null" >
+        #{watches,jdbcType=DECIMAL},
+      </if>
+      <if test="timeoriginalestimate != null" >
+        #{timeoriginalestimate,jdbcType=DECIMAL},
+      </if>
+      <if test="timeestimate != null" >
+        #{timeestimate,jdbcType=DECIMAL},
+      </if>
+      <if test="timespent != null" >
+        #{timespent,jdbcType=DECIMAL},
+      </if>
+      <if test="workflowId != null" >
+        #{workflowId,jdbcType=DECIMAL},
+      </if>
+      <if test="security != null" >
+        #{security,jdbcType=DECIMAL},
+      </if>
+      <if test="fixfor != null" >
+        #{fixfor,jdbcType=DECIMAL},
+      </if>
+      <if test="component != null" >
+        #{component,jdbcType=DECIMAL},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="environment != null" >
+        #{environment,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.vss.sys.batis.model.JiraIssueWithBLOBs" >
+    update jiraissue
+    <set >
+      <if test="pkey != null" >
+        pkey = #{pkey,jdbcType=VARCHAR},
+      </if>
+      <if test="project != null" >
+        PROJECT = #{project,jdbcType=DECIMAL},
+      </if>
+      <if test="reporter != null" >
+        REPORTER = #{reporter,jdbcType=VARCHAR},
+      </if>
+      <if test="assignee != null" >
+        ASSIGNEE = #{assignee,jdbcType=VARCHAR},
+      </if>
+      <if test="issuetype != null" >
+        issuetype = #{issuetype,jdbcType=VARCHAR},
+      </if>
+      <if test="summary != null" >
+        SUMMARY = #{summary,jdbcType=VARCHAR},
+      </if>
+      <if test="priority != null" >
+        PRIORITY = #{priority,jdbcType=VARCHAR},
+      </if>
+      <if test="resolution != null" >
+        RESOLUTION = #{resolution,jdbcType=VARCHAR},
+      </if>
+      <if test="issuestatus != null" >
+        issuestatus = #{issuestatus,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        CREATED = #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updated != null" >
+        UPDATED = #{updated,jdbcType=TIMESTAMP},
+      </if>
+      <if test="duedate != null" >
+        DUEDATE = #{duedate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="resolutiondate != null" >
+        RESOLUTIONDATE = #{resolutiondate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="votes != null" >
+        VOTES = #{votes,jdbcType=DECIMAL},
+      </if>
+      <if test="watches != null" >
+        WATCHES = #{watches,jdbcType=DECIMAL},
+      </if>
+      <if test="timeoriginalestimate != null" >
+        TIMEORIGINALESTIMATE = #{timeoriginalestimate,jdbcType=DECIMAL},
+      </if>
+      <if test="timeestimate != null" >
+        TIMEESTIMATE = #{timeestimate,jdbcType=DECIMAL},
+      </if>
+      <if test="timespent != null" >
+        TIMESPENT = #{timespent,jdbcType=DECIMAL},
+      </if>
+      <if test="workflowId != null" >
+        WORKFLOW_ID = #{workflowId,jdbcType=DECIMAL},
+      </if>
+      <if test="security != null" >
+        SECURITY = #{security,jdbcType=DECIMAL},
+      </if>
+      <if test="fixfor != null" >
+        FIXFOR = #{fixfor,jdbcType=DECIMAL},
+      </if>
+      <if test="component != null" >
+        COMPONENT = #{component,jdbcType=DECIMAL},
+      </if>
+      <if test="description != null" >
+        DESCRIPTION = #{description,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="environment != null" >
+        ENVIRONMENT = #{environment,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.vss.sys.batis.model.JiraIssueWithBLOBs" >
+    update jiraissue
+    set pkey = #{pkey,jdbcType=VARCHAR},
+      PROJECT = #{project,jdbcType=DECIMAL},
+      REPORTER = #{reporter,jdbcType=VARCHAR},
+      ASSIGNEE = #{assignee,jdbcType=VARCHAR},
+      issuetype = #{issuetype,jdbcType=VARCHAR},
+      SUMMARY = #{summary,jdbcType=VARCHAR},
+      PRIORITY = #{priority,jdbcType=VARCHAR},
+      RESOLUTION = #{resolution,jdbcType=VARCHAR},
+      issuestatus = #{issuestatus,jdbcType=VARCHAR},
+      CREATED = #{created,jdbcType=TIMESTAMP},
+      UPDATED = #{updated,jdbcType=TIMESTAMP},
+      DUEDATE = #{duedate,jdbcType=TIMESTAMP},
+      RESOLUTIONDATE = #{resolutiondate,jdbcType=TIMESTAMP},
+      VOTES = #{votes,jdbcType=DECIMAL},
+      WATCHES = #{watches,jdbcType=DECIMAL},
+      TIMEORIGINALESTIMATE = #{timeoriginalestimate,jdbcType=DECIMAL},
+      TIMEESTIMATE = #{timeestimate,jdbcType=DECIMAL},
+      TIMESPENT = #{timespent,jdbcType=DECIMAL},
+      WORKFLOW_ID = #{workflowId,jdbcType=DECIMAL},
+      SECURITY = #{security,jdbcType=DECIMAL},
+      FIXFOR = #{fixfor,jdbcType=DECIMAL},
+      COMPONENT = #{component,jdbcType=DECIMAL},
+      DESCRIPTION = #{description,jdbcType=LONGVARCHAR},
+      ENVIRONMENT = #{environment,jdbcType=LONGVARCHAR}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.vss.sys.batis.model.JiraIssue" >
+    update jiraissue
+    set pkey = #{pkey,jdbcType=VARCHAR},
+      PROJECT = #{project,jdbcType=DECIMAL},
+      REPORTER = #{reporter,jdbcType=VARCHAR},
+      ASSIGNEE = #{assignee,jdbcType=VARCHAR},
+      issuetype = #{issuetype,jdbcType=VARCHAR},
+      SUMMARY = #{summary,jdbcType=VARCHAR},
+      PRIORITY = #{priority,jdbcType=VARCHAR},
+      RESOLUTION = #{resolution,jdbcType=VARCHAR},
+      issuestatus = #{issuestatus,jdbcType=VARCHAR},
+      CREATED = #{created,jdbcType=TIMESTAMP},
+      UPDATED = #{updated,jdbcType=TIMESTAMP},
+      DUEDATE = #{duedate,jdbcType=TIMESTAMP},
+      RESOLUTIONDATE = #{resolutiondate,jdbcType=TIMESTAMP},
+      VOTES = #{votes,jdbcType=DECIMAL},
+      WATCHES = #{watches,jdbcType=DECIMAL},
+      TIMEORIGINALESTIMATE = #{timeoriginalestimate,jdbcType=DECIMAL},
+      TIMEESTIMATE = #{timeestimate,jdbcType=DECIMAL},
+      TIMESPENT = #{timespent,jdbcType=DECIMAL},
+      WORKFLOW_ID = #{workflowId,jdbcType=DECIMAL},
+      SECURITY = #{security,jdbcType=DECIMAL},
+      FIXFOR = #{fixfor,jdbcType=DECIMAL},
+      COMPONENT = #{component,jdbcType=DECIMAL}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+</mapper>

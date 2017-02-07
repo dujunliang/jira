@@ -1,0 +1,53 @@
+TYPE,ID,CONTEND,FUNDER,OWN,STATUS,PRIORITY,DANCER,MODIFYDATE,TEST,CODE
+問題報告,12788,VSS-車輛服務管理-車輛分類管理-的士-持牌人訊息,IP Tsz Wang,Zhao Crystal,測試中,中,中,2016/12/16 下午 3:04,上線後優化,VSS-834
+問題報告,12811,境內公務車詳情 - Miss code,Kevin Su,Sam Chen,測試中,中,低,2016/11/18 下午 3:17,UAT2,VSS-884
+問題報告,12869,關於電話處理及電話格式的轉換事宜,Kevin Su,Sam Chen,解決中,中,中,2016/12/12 下午 5:40,上線後優化,VSS-1024
+問題報告,12874,"VSS-車輛綜合查詢-日誌TAB(服務交易紀錄與日誌名稱不符及有些操作是日誌沒有紀錄) -- 操作會出現重覆日誌記錄及如為的士, 則未能完全顯示全部與其車輛相關的的士資料",IP Tsz Wang,Chu David,解決中,中,中,2016/12/12 下午 5:41,上線後優化,VSS-923
+問題報告,12916,登記摺打印時（單一或批量），若未第一時間輸入相關流水號則無法重新輸入，又或輸入錯誤後無法新增加修改原有記錄,Kevin Su,Zhao Crystal,已重新開啟,中,中,2016/12/12 上午 11:32,上線後優化,VSS-959
+問題報告,12927,"中國證件, 新增車主, 證件位長度不夠",Kevin Su,Sam Chen,解決中,中,低,2016/12/12 下午 5:43,上線後優化,VSS-1025
+問題報告,12935,車輛違例管理的記錄排序，要以創建日期作倒序排序；(現時不規則排序),Kevin Su,Sam Chen,測試中,中,中,2016/12/5 下午 5:49,上線後優化,VSS-1027
+問題報告,12964,新車登記完成服務後，用戶再進行另一交易時，綜合查詢回應准入條件不通過，交易未完成。,Kevin Su,Sam Chen,測試中,中,高,2016/11/25 上午 10:40,上線後優化,VSS-1030
+問題報告,12976,的士分類管理模組的問題 ,Kevin Su,Sam Chen,測試中,中,低,2016/12/16 下午 3:12,上線後優化,VSS-1036
+問題報告,12980,"違例資訊顯示在車輛檢驗管理及車輛資料管理介面(列表時對對應的車輛都會顯示), 類似綜合查詢介面的顯示方式, 顯示其違例數字(有幾多個)","Tommy, Ng Kam Pan",Zhao Crystal,已重新開啟,低,低,2016/12/12 下午 6:04,上線後優化,VSS-1019
+問題報告,12981,"現時車輛檢驗改期後, 其檢驗日期用了原來的檢驗編碼的檢驗日期取代新的編碼的檢驗日期, 在情況下, 應如何表述有關的日期,","Tommy, Ng Kam Pan",Chu David,解決中,中,中,2016/12/16 下午 3:17,上線後優化,VSS-1037
+問題報告,12996,VSS-ALT-0090 通用收費-車輛牌照稅相關的罰款版面問題 ,Kevin Su,Sam Chen,測試中,中,低,2016/12/1 上午 10:42,UAT2,
+問題報告,12997,套牌訊息的排序問題 ,Kevin Su,Sam Chen,測試中,中,低,2016/12/1 上午 10:18,UAT2,
+問題報告,13003,的士現況聲明書格式及葡文展示問題,"Rafe, Ng Lok Lok",Sun Kevin,測試中,中,中,2016/12/13 下午 3:56,上線後優化,VSS-1052
+問題報告,13004,新增的士按揭時顯示的士准照編號錯誤,"Rafe, Ng Lok Lok",Sun Kevin,測試中,中,低,2016/12/5 下午 5:50,上線後優化,VSS-1053
+問題報告,13016,廢車出口證明書-內容要更正,IP Tsz Wang,Sam Chen,測試中,中,中,2016/12/5 下午 5:50,上線後優化,VSS-1045 
+問題報告,13041,驗車排期的 logic 需從新 review,Kevin Su,Chu David,新建,中,低,2016/12/9 下午 6:15,Production,
+問題報告,13042,電單車需可以更改車主 ID,Kevin Su,Sam Chen,解決中,中,高,2016/12/15 下午 12:31,Production,VSS-1108
+問題報告,13045,定檢收據的備註重複 (CM46436),Kevin Su,Chu David,已重新開啟,中,中,2016/12/12 下午 5:17,Production,VSS-1060
+問題報告,13051,"型號認可後枱管理, 輸入了認可編號後, 按ENTER鍵不能直接trigger到查詢按鈕",Kevin Su,Chu David,測試中,中,低,2016/12/5 下午 8:16,Production,
+問題報告,13067,補發、因更改資料或附註而更換車輛登記摺的申請 - 更改重型及輕型電單車車主登記的地址(及汽車電話) 於收據內不應列印取替登記摺有效期為60天,Kevin Su,Zhao Crystal,測試中,中,中,2016/12/5 下午 5:51,Production,
+問題報告,13073,新增配件不成功? 試左幾架車都唔得,Kevin Su,Sam Chen,測試中,中,中,2016/12/5 下午 5:52,Production,
+問題報告,13078,"排程管理:用front-end功能修改JOB時間, 會將mount point 及day 自動清空 (介面没有相關欄位作修改)",Kevin Su,Sam Chen,測試中,中,中,2016/12/12 下午 5:44,Production,
+問題報告,13081,證明書之牌子/款式顯示,Kevin Su,Zhao Crystal,已重新開啟,中,中,2016/12/13 下午 12:41,Production,VSS-1071
+問題報告,13088,"型號認可版面碟刹(MM) , 有小數點一位",Kevin Su,Chu David,解決中,中,中,2016/12/12 下午 5:45,Production,VSS-1085
+問題報告,13090,型號認可加廢氣批模日期,Kevin Su,Chu David,解決中,中,低,2016/12/12 下午 5:46,Production,Vss-1086
+問題報告,13091,型號認可品牌顯示全寫,Kevin Su,Chu David,解決中,中,低,2016/12/12 下午 5:46,Production,VSS-1074
+問題報告,13115,2017年1月份，要ATOS介紹，每個介面需要什麼VSS的權限，以及重新檢查VSS權限現時的配置是否正確,Kevin Su,Sun Kevin,新建,中,中,2016/12/5 下午 6:39,Production,
+問題報告,13117,"特別檢驗, 如果最後檢驗日期是星期六, 星期日或假日, 應延後到下一工作日",Kevin Su,Chu David,解決中,中,中,2016/12/12 下午 5:48,Production,VSS-1088
+問題報告,13118,DSF - MV file - 認可驗車日期 ,Kevin Su,Rong Lei,測試中,中,高,2016/12/8 下午 5:50,Production,
+問題報告,13122,車輛套牌收據抽籤後車牌顯示問題 ,Kevin Su,Chu David,測試中,中,中,2016/12/8 下午 5:51,Production,VSS-1089
+問題報告,13124,收據出現英文說明，請改為葡文 ,Kevin Su,Sam Chen,解決中,中,中,2016/12/15 上午 11:45,Production,VSS-1090
+問題報告,13126,"的士按揭版面""返回""按扭無反應","Rafe, Ng Lok Lok",Sam Chen,測試中,中,中,2016/12/16 下午 3:43,上線後優化,VSS-1096
+問題報告,13128,的士准照加備註,"Rafe, Ng Lok Lok",Sun Kevin,解決中,中,中,2016/12/12 下午 5:49,上線後優化,VSS-1094
+問題報告,13129,新增違例 - 通知書編號 ,Sam Chen,Sam Chen,新建,低,中,2016/12/12 上午 10:17,上線後優化,VSS-1097
+問題報告,13132,新車登記，半掛車(S)和工業機器(I)只需發登記摺 (現時文件交收清單的文件類別是登記摺和憑單，需要改為發登記摺),"Jessica, Ip U Peng",Sam Chen,解決中,中,中,2016/12/15 下午 12:06,Production,VSS-1104
+問題報告,13133,批量列印登記摺(重印不成功),"Rafe, Ng Lok Lok",Zhao Crystal,解決中,中,中,2016/12/15 上午 11:47,上線後優化,VSS-1099
+問題報告,13137,增加登記摺的「加快」收費操作,"Ryan, Wong Wa Ian",Sam Chen,測試中,高,中,2016/12/15 下午 12:09,上線後優化,VSS-1105
+問題報告,13141,於摩托車車主轉名/新增車主的申請人輸入版面上加入讀取智能身份證/其他證件條碼的功能,"Ryan, Wong Wa Ian",Sun Kevin,解決中,中,中,2016/12/15 下午 12:34,上線後優化,VSS-1109
+問題報告,13142,DSAJ歷史交換記錄的頁面 欄位調整,"Tommy, Ng Kam Pan",Zhao Crystal,解決中,中,中,2016/12/15 下午 12:16,Production,VSS-1106
+問題報告,13143,"不是IVM車,卻自動生成IVM驗車CODE","Rafe, Ng Lok Lok",Zhao Crystal,測試中,中,中,2016/12/16 下午 4:13,上線後優化,VSS-1107
+問題報告,13144,違例備註長度限制 (200 character) 與DB DESIGN不符合 (1000 character),"Tommy, Ng Kam Pan",Sam Chen,解決中,高,中,2016/12/15 下午 12:53,Production,VSS-1102
+問題報告,13145,車輛綜合查詢介面-只可查詢教練車資料,"Tommy, Ng Kam Pan",Zhao Crystal,解決中,高,中,2016/12/15 下午 12:37,上線後優化,VSS-1110
+問題報告,13146,車輛綜合查詢介面-只可查詢旅遊巴資料,"Tommy, Ng Kam Pan",Zhao Crystal,解決中,高,中,2016/12/15 下午 12:38,上線後優化,VSS-1111
+問題報告,13149,"違例備註當在remark跳行按Enter時就馬上出現 ERROR: ""輸入的訊息長度不能大於200個字符"" 但無輸入任何字只按Enter","Tommy, Ng Kam Pan",Sam Chen,解決中,中,中,2016/12/15 下午 12:42,Production,VSS-1112
+問題報告,13150,VSS - 車綜合查詢版面加入VSS 版本的資訊,"Tommy, Ng Kam Pan",Sam Chen,解決中,中,低,2016/12/15 下午 12:44,Production,VSS-1113
+問題報告,13151,提供車輛「缺驗通知書」之功能,"Ryan, Wong Wa Ian",Sam Chen,測試中,高,中,2016/12/16 下午 4:10,上線後優化,VSS-1114
+問題報告,13152,"型號認可介面-文字修正 - 氣缸數量 應為汽缸數量, 氣缸容量應為汽缸容量","Tommy, Ng Kam Pan",Chu David,解決中,低,低,2016/12/15 下午 12:52,Production,VSS-1103
+問題報告,13158,VSS報表-每月新車資料統計報表,"Patricia, Chio Choi I",Sam Chen,解決中,中,中,2016/12/16 下午 3:05,上線後優化,VSS-1115
+問題報告,13162,"VSS-車輛分類管理-的士-持牌人訊息,在""詳情""右邊三角形按鈕加日誌以紀錄事件",Sam Chen,Sam Chen,解決中,中,低,2016/12/16 下午 3:10,上線後優化,VSS-1116
+問題報告,13165,"財務人員要按 ""日結""按鈕兩次，才完成日結工序","Jessica, Ip U Peng",Unassigned,新建,中,中,2016/12/16 下午 4:37,Production,
+問題報告,13166,型號認可資料輸入,Sam Chen,Chu David,解決中,中,中,2016/12/16 下午 5:20,Production,VSS-1117

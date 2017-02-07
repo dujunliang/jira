@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <properties>
+        <property name="dialect" value="mysql" />
+    </properties>
+
+    <settings>
+        <setting name="cacheEnabled" value="true" />
+        <!--<setting name="cacheEnabled" value="true"/>-->
+        <!--&lt;!&ndash;这个配置使全局的映射器启用或禁用 缓存&ndash;&gt;-->
+        <!--<setting name="lazyLoadingEnabled" value="true"/>-->
+        <!--&lt;!&ndash;全局启用或禁用延迟加载。当禁用时, 所有关联对象都会即时加载&ndash;&gt;-->
+        <!--<setting name="multipleResultSetsEnabled" value="true"/>-->
+        <!--&lt;!&ndash;允许或不允许多种结果集从一个单独 的语句中返回(需要适合的驱动)&ndash;&gt;-->
+        <!--<setting name="useColumnLabel" value="true"/>-->
+        <!--&lt;!&ndash;使用列标签代替列名。 不同的驱动在这 方便表现不同。 参考驱动文档或充分测 试两种方法来决定所使用的驱动。&ndash;&gt;-->
+        <!--<setting name="useGeneratedKeys" value="false"/>-->
+        <!--&lt;!&ndash;允许 JDBC 支持生成的键。 需要适合的 驱动。 如果设置为 true 则这个设置强制 生成的键被使用, 尽管一些驱动拒绝兼 容但仍然有效(比如 Derby)&ndash;&gt;-->
+        <!--<setting name="autoMappingBehavior" value="PARTIAL"/>-->
+        <!--&lt;!&ndash;指定 MyBatis 如何自动映射列到字段/ 属性。PARTIAL 只会自动映射简单, 没有嵌套的结果。FULL 会自动映射任 意复杂的结果(嵌套的或其他情况) &ndash;&gt;-->
+        <!--<setting name="defaultExecutorType" value="SIMPLE"/>-->
+        <!--&lt;!&ndash;配置默认的执行器。SIMPLE 执行器没 有什么特别之处。REUSE 执行器重用 预处理语句。BATCH 执行器重用语句 和批量更新&ndash;&gt;-->
+        <!--<setting name="defaultStatementTimeout" value="25"/>-->
+        <!--&lt;!&ndash;设置超时时间, 它决定驱动等待一个数 据库响应的时间。&ndash;&gt;-->
+        <!--<setting name="safeRowBoundsEnabled" value="false"/>-->
+        <!--&lt;!&ndash;Allows using RowBounds on nested statements.&ndash;&gt;-->
+        <!--<setting name="mapUnderscoreToCamelCase" value="false"/>-->
+        <!--&lt;!&ndash;Enables automatic mapping from classic database column names A_COLUMN to camel case classic Java property names aColumn&ndash;&gt;-->
+        <!--<setting name="localCacheScope" value="SESSION"/>-->
+        <!--&lt;!&ndash;MyBatis uses local cache to prevent circular references and speed up repeated nested queries.&ndash;&gt;-->
+        <!--<setting name="jdbcTypeForNull" value="OTHER"/>-->
+        <!--&lt;!&ndash;Specifies the JDBC type for null values when no specific JDBC type was provided for the parameter&ndash;&gt;-->
+        <!--<setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString"/>-->
+        <!--&lt;!&ndash;Specifies which Object's methods trigger a lazy load&ndash;&gt;-->
+        <setting name="logImpl" value="LOG4J" />
+    </settings>
+    <!-- 定义类型的别名 -->
+    <!--<typeAliases>-->
+         <!--<typeAlias type="com.mybatis.pojo.Student" alias="Student" />-->
+        <!--<package name="com.vss.sys"/>-->
+    <!--</typeAliases>-->
+    <!-- 类型处理器 -->
+    <!--<typeHandlers>-->
+        <!--<typeHandler handler="com.mybatis.handlers.PhoneTypeHandler"/>-->
+    <!--</typeHandlers>-->
+
+    <!--<mappers>-->
+        <!--<mapper resource="com/vss/sys/mappers/StudentMapper.xml" />-->
+        <!--<mapper url="file:///D:/mybatisdemo/mappers/StudentMapper.xml" />-->
+        <!--<mapper class="com.mybatis.mappers.StudentMapper" />-->
+        <!--<package name="com/vss/sys"/>-->
+    <!--</mappers>-->
+</configuration>
